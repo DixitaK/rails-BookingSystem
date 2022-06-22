@@ -1,0 +1,11 @@
+<h2 style="margin-left: -5%;">New City</h2>
+<%= form_with model: @city do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+    <%= form.submit %>
+  </p>
+  <div>
+</div>
+<% end %>
