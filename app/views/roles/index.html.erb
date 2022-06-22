@@ -1,0 +1,15 @@
+<h2>Roles list</h2>
+
+
+  <% @roles.each do |r| %>
+  <ol>
+    <%= r.id %>.
+    <%= r.name %>
+  </ol>
+  <%end%>
+  <p class="link"><%= link_to "Add New Role", new_role_path %></p>
+
+
+
+
+
