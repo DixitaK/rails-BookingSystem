@@ -1,0 +1,22 @@
+<h2>Your Booking Details</h2>
+<table>
+  <thead>
+    <th>User Name</th>
+    <th>Event</th>
+    <th>Location</th>
+    <th>No. of Booking (capacity)</th>
+    <th>Status</th>
+    <th>Update</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @booking.user.name %></td>
+      <td><%= @booking.event.name %></td> 
+      <td><%= @booking.event.location.name %></td> 
+      <td><%= @booking.capacity%></td>
+      <td><%= @booking.status %></td>
+      <td><%= link_to 'Confirm', user_booking_confirm_path(user_id: @booking.user.id, booking_id: @booking.id), data: { "turbo-method": :put } %>
+        <br><%= link_to 'Cancel', user_booking_cancel_path(user_id: @booking.user.id, booking_id: @booking.id), data: { "turbo-method": :put } %>
+    </tr>
+  </tbody>
+</table>

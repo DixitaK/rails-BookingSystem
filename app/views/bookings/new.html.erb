@@ -1,0 +1,16 @@
+<h2 style="margin-left: -5%;">New Booking Details</h2>
+<%= form_with model: [@user,@user.bookings.build] do |form| %>
+  <p>
+    <%= form.label :event_id %><br>
+    <%=form.collection_select :event_id, Event.all, :id, :name %>
+  </p>
+
+  </p>
+  <p>
+    <%= form.label :capacity%> (no. of tickets)<br>
+    <%= form.text_field :capacity %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
