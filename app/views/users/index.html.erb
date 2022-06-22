@@ -1,0 +1,21 @@
+<h2 class="link">Users List</h2>
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Contact</th>
+    <th>Email</th>
+    <th>New Booking</th>
+  </thead>
+  <tbody>
+
+    <% @users.each do |user| %>
+    <tr>
+        <td><%= user.name %></td>
+        <td><%= user.phone %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to "Book Now", new_user_booking_path(user)%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p class="link"><%= link_to "Add New User", new_user_path %></p>
