@@ -1,0 +1,28 @@
+<h2 style="margin-left: -5%;">New Event Details</h2>
+<%= form_with model: @event do |form| %>
+  <p>
+    <%= form.label :category_id %><br>
+    <%=form.collection_select :category_id, Category.all, :id, :name, {}%>
+  </p>
+  
+  <p><%= form.select(:city_id, City.all.collect {|c| [c.name, c.id]},  {prompt: "Select City"}) %>
+  <%= form.select(:location_id, Location.all.collect {|l| [l.name, l.id]},{prompt: "Select Location"},{:disabled => true}) %></p>
+  
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :start_time %><br>
+    <%= form.datetime_field :start_time %>
+  </p>
+  <p>
+    <%= form.label :end_time %><br>
+    <%= form.datetime_field :end_time %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+  <div>
+</div>
+<% end %>
