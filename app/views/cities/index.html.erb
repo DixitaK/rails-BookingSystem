@@ -1,0 +1,9 @@
+<h2>Cities list</h2>
+  <% @cities.each do |c| %>
+  <ol>
+    <%= c.id %>.
+    <%= c.name %>
+  </ol>
+  <%end%>
+
+  <p class="link"><%= link_to "Add New City", new_city_path %></p>
