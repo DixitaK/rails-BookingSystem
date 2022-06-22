@@ -1,0 +1,15 @@
+<h2>Catgeories list</h2>
+
+
+  <% @categories.each do |c| %>
+  <ol>
+    <%= c.id %>.
+    <%= c.name %>
+  </ol>
+  <%end%>
+
+<p class="link"><%= link_to "Add New Category", new_category_path %></p>
+
+
+
+
