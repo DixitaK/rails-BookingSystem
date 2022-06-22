@@ -1,0 +1,21 @@
+<h2>Locations List</h2>
+<table>
+  <thead>
+    <th>City</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Capacity</th>
+  </thead>
+  <tbody>
+
+    <% @locations.each do |l| %>
+    <tr>
+      <td><%= l.city.name %></td>
+      <td><%= l.name %></td>
+      <td><%= l.address %></td>
+      <td><%= l.capacity %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<p class="link"><%= link_to "Add New Location", new_location_path %></p>
