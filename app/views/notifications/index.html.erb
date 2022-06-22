@@ -1,0 +1,17 @@
+<h2>Notifications</h2>
+<table>
+  <thead>
+    <th>Category</th>
+    <th>Event</th>
+    <th>Message</th>
+  </thead>
+  <tbody>
+    <% @notifications.each do |n| %>
+    <tr>
+      <td><%= n.notifiable.category.name%></td>
+        <td><%= n.notifiable.name %></td>
+        <td><%= n.message %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
